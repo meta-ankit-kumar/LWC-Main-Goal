@@ -8,13 +8,14 @@ export default class TeamList extends LightningElement {
 	@api teams;
 	@track messages;
 	wiredTeamMembersResult;
-	@wire(getListUi, { objectApiName: 'TeamMember__c', listViewApiName: 'Members_with_team' })
+	@wire(getListUi, { objectApiName: 'TeamMember__c', listViewApiName: 'Members_with_team', pageSize: 200 })
 	wiredTeamMembers(result) {
 		this.wiredTeamMembersResult = result;
 		this.initializeTeamMembersList(result);
 	}
 
 	initializeTeamMembersList(result) {
+		console.log('Initialize team members called');
 		const { error, data } = result;
 		if (data) {
 			this.allTeamMembers = data.records.records.map(record => ({
@@ -25,7 +26,9 @@ export default class TeamList extends LightningElement {
 				teamId: record.fields.Team__r.value.fields.Id.value
 			}))
 
-			this.selectedTeam = this.allTeamMembers.length ? this.allTeamMembers[0].teamId : '';
+			console.log('this.allTeamMembers', JSON.stringify(this.allTeamMembers));
+
+			if (!this.selectedTeam) this.selectedTeam = this.allTeamMembers.length ? this.allTeamMembers[0].teamId : '';
 		}
 		else if (error) {
 			this.messages = error.message;
