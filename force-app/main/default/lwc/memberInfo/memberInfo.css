@@ -1,0 +1,20 @@
+.member-info-container {
+	padding: 1rem;
+	box-shadow: 0px 0px 1px 0px;
+	border-radius: 1%;
+	width: 100%;
+}
+.member-info-container p {
+    display: flex;
+    align-items: center;
+}
+
+.info-type {
+    margin-right: 1rem;
+	font-weight: bold;
+}
+
+.info-value {
+    flex-grow: 1;
+    border-bottom: 1px solid #ccc;
+}

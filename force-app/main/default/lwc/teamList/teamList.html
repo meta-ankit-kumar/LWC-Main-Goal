@@ -1,0 +1,22 @@
+<template>
+    <div class="team-list-container">
+		<div class="team-selection-container">
+			<p class="team-selection-input-label">Please select the Team: </p>
+			<select required name="member-team-name" onchange={handleTeamNameChange}>
+				<option for:each={teams} for:item="team" key={team.id} value={team.id} onchange={handleTeamNameChange}>{team.name}</option>
+			</select>
+		</div>
+		<div if:false={selectedTeam}>
+			<p>Please select a team to display the team members</p>
+		</div>
+		<div class="members-list">
+			<!-- <p>{teamMembers}</p> -->
+			<div if:false={isTeamEmpty} for:each={teamMembers} for:item="memberInfo" key={memberInfo.id}>
+				<c-member-info name={memberInfo.name} team-name={memberInfo.teamName} skills={memberInfo.skills}></c-member-info>
+			</div>
+			<div if:true={isTeamEmpty}>
+				No team member is added in the team yet. Please use the form to add a new member.
+			</div>
+		</div>
+	</div>
+</template>

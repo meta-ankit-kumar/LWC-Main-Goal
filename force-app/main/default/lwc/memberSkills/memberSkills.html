@@ -1,0 +1,27 @@
+<template>
+    <div class="main-member-container">
+        <div class="member-skills-container">
+            <div if:false={errors} class="labels-container">
+                <label for="member-name">Name:</label>
+                <label for="member-name">Team:</label>
+                <label for="member-skills">Skills:</label>
+            </div>
+            <div if:false={errors} class="inputs-container">
+                <form onsubmit={handleSubmit}>
+                    <input required minlength="4" type="text" name="member-name" id="member-name">
+                    <select required name="member-team-name" onchange={handleTeamNameChange}>
+                        <option for:each={teams} for:item="team" key={team.id} value={team.id}>{team.name}</option>
+                    </select>
+                    <input required type="text" name="member-skills" id="member-skills">
+                    <input class="submit-button" type="submit" value="Submit">
+                </form>
+            </div>
+            <div if:true={errors}>
+                <p>{errorsToBeShown}</p>
+            </div>
+        </div>
+        <div class="message-container" if:true={message}>
+            <c-message text={message} onclearmessage={handleClearMessage}></c-message>
+        </div>
+    </div>
+</template>
