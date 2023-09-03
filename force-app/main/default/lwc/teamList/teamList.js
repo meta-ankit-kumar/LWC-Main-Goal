@@ -47,13 +47,13 @@ export default class TeamList extends LightningElement {
 	}
 
 	get teamMembers() {
-		const membersList = this.allTeamMembers.filter(memberInfo => memberInfo.teamId === this.selectedTeam);
+		const membersList = this.allTeamMembers?.filter(memberInfo => memberInfo.teamId === this.selectedTeam);
 		return membersList;
 	}
 
 	get isTeamEmpty() {
-		const membersList = this.allTeamMembers.filter(memberInfo => memberInfo.teamId === this.selectedTeam);
-		return membersList.length === 0;
+		const membersList = this.allTeamMembers?.filter(memberInfo => memberInfo.teamId === this.selectedTeam);
+		return membersList?.length === 0;
 	}
 
 	handleTeamNameChange(event) {
