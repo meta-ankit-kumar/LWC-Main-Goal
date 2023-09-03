@@ -2,6 +2,7 @@ import { api, LightningElement, track, wire } from 'lwc';
 import { getListUi } from 'lightning/uiListApi';
 import { refreshApex } from '@salesforce/apex';
 
+
 export default class TeamList extends LightningElement {
 	@track allTeamMembers;
 	@track selectedTeam;
@@ -25,8 +26,6 @@ export default class TeamList extends LightningElement {
 				teamName: record.fields.Team__r.value.fields.Name.value,
 				teamId: record.fields.Team__r.value.fields.Id.value
 			}))
-
-			console.log('this.allTeamMembers', JSON.stringify(this.allTeamMembers));
 
 			if (!this.selectedTeam) this.selectedTeam = this.allTeamMembers.length ? this.allTeamMembers[0].teamId : '';
 		}
