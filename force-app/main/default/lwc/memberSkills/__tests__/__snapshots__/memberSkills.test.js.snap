@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-member-skills should handle form submission error 1`] = `
+<c-member-skills
+  x-test_memberskills-host=""
+>
+  #shadow-root(open)
+    <div
+      class="main-member-container"
+      x-test_memberskills=""
+    >
+      <div
+        class="member-skills-container"
+        x-test_memberskills=""
+      >
+        <div
+          class="error-section"
+          x-test_memberskills=""
+        >
+          <p
+            x-test_memberskills=""
+          >
+            There was some problem while retrieving the data: Error message from createRecord
+          </p>
+        </div>
+      </div>
+    </div>
+</c-member-skills>
+`;
+
+exports[`c-member-skills should submit the form and handle success 1`] = `
+<c-member-skills
+  x-test_memberskills-host=""
+>
+  #shadow-root(open)
+    <div
+      class="main-member-container"
+      x-test_memberskills=""
+    >
+      <div
+        class="member-skills-container"
+        x-test_memberskills=""
+      >
+        <div
+          class="labels-container"
+          x-test_memberskills=""
+        >
+          <label
+            for="[shadow:guid]"
+            x-test_memberskills=""
+          >
+            Name:
+          </label>
+          <label
+            for="[shadow:guid]"
+            x-test_memberskills=""
+          >
+            Team:
+          </label>
+          <label
+            for="[shadow:guid]"
+            x-test_memberskills=""
+          >
+            Skills:
+          </label>
+        </div>
+        <div
+          class="inputs-container"
+          x-test_memberskills=""
+        >
+          <form
+            x-test_memberskills=""
+          >
+            <input
+              id="[shadow:guid]"
+              minlength="4"
+              name="member-name"
+              required=""
+              type="text"
+              x-test_memberskills=""
+            />
+            <select
+              name="member-team-name"
+              required=""
+              x-test_memberskills=""
+            >
+              <option
+                value="1"
+                x-test_memberskills=""
+              >
+                Team 1
+              </option>
+              <option
+                value="2"
+                x-test_memberskills=""
+              >
+                Team 2
+              </option>
+            </select>
+            <input
+              id="[shadow:guid]"
+              name="member-skills"
+              required=""
+              type="text"
+              x-test_memberskills=""
+            />
+            <input
+              class="submit-button"
+              type="submit"
+              value="Submit"
+              x-test_memberskills=""
+            />
+          </form>
+        </div>
+      </div>
+      <div
+        class="message-container"
+        x-test_memberskills=""
+      >
+        <c-message
+          x-test_memberskills=""
+          x-test_message-host=""
+        >
+          #shadow-root(open)
+            <div
+              class="message-info"
+              x-test_message=""
+            >
+              New Memeber: Test Member Name is added successfully
+            </div>
+        </c-message>
+      </div>
+    </div>
+</c-member-skills>
+`;
