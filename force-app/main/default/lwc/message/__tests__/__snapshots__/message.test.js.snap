@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-message should render the component successfully 1`] = `
+<c-member-info
+  x-test_message-host=""
+>
+  #shadow-root(open)
+    <div
+      class="message-info"
+      x-test_message=""
+    >
+      Test message
+    </div>
+</c-member-info>
+`;

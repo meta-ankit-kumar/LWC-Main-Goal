@@ -13,6 +13,7 @@ export default class Message extends LightningElement {
 	resetText() {
 		setTimeout(() => {
 			this.dispatchEvent(new ClearMessageEvent({ bubbles: true }));
+			console.log('event is emitted');
 		}, this.visibilityTime);
 	}
 }
