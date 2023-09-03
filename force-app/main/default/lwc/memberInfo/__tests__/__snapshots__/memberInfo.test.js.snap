@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-member-info should render the component successfully 1`] = `
+<c-member-info
+  x-test_memberinfo-host=""
+>
+  #shadow-root(open)
+    <div
+      class="member-info-container"
+      x-test_memberinfo=""
+    >
+      <p
+        x-test_memberinfo=""
+      >
+        <span
+          class="info-type"
+          x-test_memberinfo=""
+        >
+          Name:
+        </span>
+        <span
+          class="info-value"
+          x-test_memberinfo=""
+        >
+          Dummy Member Name
+        </span>
+      </p>
+      <p
+        x-test_memberinfo=""
+      >
+        <span
+          class="info-type"
+          x-test_memberinfo=""
+        >
+          Team:
+        </span>
+        <span
+          class="info-value"
+          x-test_memberinfo=""
+        >
+          Dummy Team Name
+        </span>
+      </p>
+      <p
+        x-test_memberinfo=""
+      >
+        <span
+          class="info-type"
+          x-test_memberinfo=""
+        >
+          Skills:
+        </span>
+        <span
+          class="info-value"
+          x-test_memberinfo=""
+        >
+          Skills
+        </span>
+      </p>
+    </div>
+</c-member-info>
+`;
