@@ -11,18 +11,12 @@ export default class Main extends LightningElement {
 				name: record.fields.Name.value
 			}))));
 			console.log('this.teams', JSON.stringify(this.teams));
-		} else if (error) {
-			this.errors = error.message;
 		}
 	}
 
 	handleMemberChange(event) {
-		try {
-			console.log('Member change detected');
-			console.log('this.template.querySelector', this.template.querySelector('c-team-list'));
+		console.log('Member change detected');
+		console.log('this.template.querySelector', this.template.querySelector('c-team-list'));
 		this.template.querySelector('c-team-list').refreshList();
-		} catch (error) {
-			console.log('In the catch', JSON.stringify(error));
-		}
 	}
 }
