@@ -1,6 +1,5 @@
-import { getListUi } from 'lightning/uiListApi';
 import { createRecord } from 'lightning/uiRecordApi';
-import { api, LightningElement, track, wire } from 'lwc';
+import { api, LightningElement, track } from 'lwc';
 import { MESSAGE } from './constants';
 import { MemberAddedEvent } from './event';
 import { useTemplate } from './utils';
@@ -9,17 +8,6 @@ export default class MemberSkills extends LightningElement {
 	@api teams;
 	@track errors;
 	@track message;
-	// @wire(getListUi, { objectApiName: 'Team__c', listViewApiName: 'All' })
-	// wiredTeams({ data, error }) {
-	// 	if (data) {
-	// 		this.teams = JSON.parse(JSON.stringify(data.records.records.map(record => ({
-	// 			id: record.fields.Id.value,
-	// 			name: record.fields.Name.value
-	// 		}))))
-	// 	} else if (error) {
-	// 		this.errors = error.message;
-	// 	}
-	// }
 
 	handleSubmit(event) {
 		event.preventDefault();
@@ -45,11 +33,11 @@ export default class MemberSkills extends LightningElement {
 			});
 	}
 
-	handleClearMessage(event) {
+	handleClearMessage() {
 		this.message = null;
 	}
 
 	get errorsToBeShown() {
-		return useTemplate(MESSAGE.MEMBER_CREATION.ERROR, { ERRORS: this.errors });
+		return useTemplate(MESSAGE.MEMBER_CREATION.ERROR.GENERIC, { ERRORS: this.errors });
 	}
 }
