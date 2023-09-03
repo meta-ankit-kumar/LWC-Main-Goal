@@ -1,5 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`c-member-skills should clear the success message after the given time 1`] = `
+<c-member-skills
+  x-test_memberskills-host=""
+>
+  #shadow-root(open)
+    <div
+      class="main-member-container"
+      x-test_memberskills=""
+    >
+      <div
+        class="member-skills-container"
+        x-test_memberskills=""
+      >
+        <div
+          class="labels-container"
+          x-test_memberskills=""
+        >
+          <label
+            for="[shadow:guid]"
+            x-test_memberskills=""
+          >
+            Name:
+          </label>
+          <label
+            for="[shadow:guid]"
+            x-test_memberskills=""
+          >
+            Team:
+          </label>
+          <label
+            for="[shadow:guid]"
+            x-test_memberskills=""
+          >
+            Skills:
+          </label>
+        </div>
+        <div
+          class="inputs-container"
+          x-test_memberskills=""
+        >
+          <form
+            x-test_memberskills=""
+          >
+            <input
+              id="[shadow:guid]"
+              minlength="4"
+              name="member-name"
+              required=""
+              type="text"
+              x-test_memberskills=""
+            />
+            <select
+              name="member-team-name"
+              required=""
+              x-test_memberskills=""
+            >
+              <option
+                value="1"
+                x-test_memberskills=""
+              >
+                Team 1
+              </option>
+              <option
+                value="2"
+                x-test_memberskills=""
+              >
+                Team 2
+              </option>
+            </select>
+            <input
+              id="[shadow:guid]"
+              name="member-skills"
+              required=""
+              type="text"
+              x-test_memberskills=""
+            />
+            <input
+              class="submit-button"
+              type="submit"
+              value="Submit"
+              x-test_memberskills=""
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+</c-member-skills>
+`;
+
 exports[`c-member-skills should handle form submission error 1`] = `
 <c-member-skills
   x-test_memberskills-host=""
